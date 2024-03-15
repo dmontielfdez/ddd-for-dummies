@@ -5,13 +5,13 @@ namespace Dmontielfdez\Shared\Framework\Domain\ValueObjects;
 interface IdentifierInterface
 {
     /**
-     * @param string|int $value
+     * @param string $value
      * @return static
      */
-    public static function create(string|int $value): self;
+    public static function create(string $value): self;
 
     /**
-     * @return string|int
+     * @return string
      */
-    public function getValue(): int|string;
+    public function getValue(): string;
 }

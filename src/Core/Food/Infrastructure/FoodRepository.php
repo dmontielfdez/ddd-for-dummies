@@ -3,6 +3,7 @@
 namespace Dmontielfdez\Core\Food\Infrastructure;
 
 use Dmontielfdez\Core\Food\Domain\Entities\Food;
+use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;
 use Dmontielfdez\Core\Food\Domain\ReadModels\ListFoodRM;
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
 use Dmontielfdez\Core\Food\Domain\ValueObjects\FoodId;
@@ -47,8 +48,8 @@ final class FoodRepository implements FoodRepositoryInterface
                     $foodAR->proteins,
                     $foodAR->fats,
                     $foodAR->carbs,
-                    $foodPortionAR->type,
-                    $foodPortionAR->amount
+                    FoodPortionType::from($foodPortionAR->type)->name,
+                    $foodPortionAR->amount ?? 0
                 );
             },
             $foodsAR

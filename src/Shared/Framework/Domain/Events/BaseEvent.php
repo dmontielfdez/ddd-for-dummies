@@ -5,9 +5,6 @@ namespace Dmontielfdez\Shared\Framework\Domain\Events;
 
 use Dmontielfdez\Shared\Framework\Domain\ValueObjects\IdentifierInterface;
 
-/**
- * @template T
- */
 abstract class BaseEvent
 {
     public string $relatedId;

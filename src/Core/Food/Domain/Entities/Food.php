@@ -69,7 +69,7 @@ class Food extends BaseEntity
     private function checkProperties(): array
     {
         $errors = [];
-        foreach ($this as $key => $value) {
+        foreach ((array)$this as $key => $value) {
             if ($value === null) {
                 $errors[] = $key;
             }

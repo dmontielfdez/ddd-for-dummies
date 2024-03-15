@@ -41,7 +41,7 @@ final readonly class FoodMapper
             $foodAR->proteins,
             $foodAR->fats,
             $foodAR->carbs,
-            FoodPortion::createFrom(FoodPortionType::from($foodPortionAR->type), $foodPortionAR->amount)
+            FoodPortion::createFrom(FoodPortionType::from($foodPortionAR->type), $foodPortionAR->amount ?? 0)
         );
     }
 }

@@ -18,7 +18,7 @@ initDb: ## Run migrations
 	@./vendor/bin/sail exec laravel.test php artisan db:seed
 
 phpstan:
-	@./vendor/bin/sail exec laravel.test vendor/bin/phpstan analyse --memory-limit=2G --level 9 ./src ./Apps -c phpstan.neon
+	@./vendor/bin/sail exec laravel.test vendor/bin/phpstan analyse --memory-limit=2G --level 9 ./src -c phpstan.neon
 
 composer:
 	@./vendor/bin/sail composer install
