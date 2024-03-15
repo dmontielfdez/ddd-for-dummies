@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
-use Dmontielfdez\Core\Food\Infrastructure\FoodRepository;
+use Dmontielfdez\Core\Food\Infrastructure\Repositories\FoodRepository;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandBus;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandBusInterface;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBus;

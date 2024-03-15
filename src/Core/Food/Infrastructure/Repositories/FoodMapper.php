@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Core\Food\Infrastructure;
+namespace Dmontielfdez\Core\Food\Infrastructure\Repositories;
 
 use Dmontielfdez\Core\Food\Domain\Entities\Food;
 use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;

@@ -8,7 +8,7 @@ window.bootstrap = bootstrap;
 
 
 createInertiaApp({
-    title: title => `${title} - DDD for dummies`,
+    title: title => `DDD for dummies`,
     resolve: name => {
         const pages = import.meta.glob('./pages/**/*.vue', {eager: true})
         return pages[`./pages/${name}.vue`]

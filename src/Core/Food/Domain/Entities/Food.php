@@ -21,7 +21,7 @@ class Food extends BaseEntity
         public ?int $proteins,
         public ?int $fats,
         public ?int $carbs,
-        public ?FoodPortion $foodPortion
+        public FoodPortion $foodPortion
     )
     {
     }

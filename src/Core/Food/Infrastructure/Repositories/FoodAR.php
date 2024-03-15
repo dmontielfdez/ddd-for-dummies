@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Core\Food\Infrastructure;
+namespace Dmontielfdez\Core\Food\Infrastructure\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 final class FoodAR extends Model
 {
     protected $table = 'food';
+    public $incrementing = false;
     protected $fillable = [
         'id',
         'status',

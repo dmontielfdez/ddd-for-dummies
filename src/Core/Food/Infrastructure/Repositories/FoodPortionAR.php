@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Core\Food\Infrastructure;
+namespace Dmontielfdez\Core\Food\Infrastructure\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +17,7 @@ final class FoodPortionAR extends Model
         'type',
         'amount',
     ];
+
+    public $timestamps = false;
 
 }

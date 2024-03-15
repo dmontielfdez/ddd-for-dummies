@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Core\Food\Infrastructure;
+namespace Dmontielfdez\Core\Food\Infrastructure\Repositories;
 
 use Dmontielfdez\Core\Food\Domain\Entities\Food;
 use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;
@@ -21,6 +21,12 @@ final class FoodRepository implements FoodRepositoryInterface
         } else {
             FoodAR::create(FoodMapper::extract($food));
         }
+
+        FoodPortionAR::query()->updateOrCreate(
+            ['foodId' => $food->id->getValue()],
+            ['type' => $food->foodPortion->type->value, 'amount' => $food->foodPortion->amount]
+
+        );
     }
 
     public function findByIdOrFail(FoodId $foodId): Food
