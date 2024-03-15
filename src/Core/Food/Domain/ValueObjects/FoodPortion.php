@@ -3,6 +3,7 @@
 namespace Dmontielfdez\Core\Food\Domain\ValueObjects;
 
 use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;
+use Dmontielfdez\Core\Food\Domain\Exceptions\AmountNotValidException;
 
 final class FoodPortion
 {
@@ -12,11 +13,20 @@ final class FoodPortion
     /**
      * @param FoodPortionType $type
      * @param int $amount
+     * @return FoodPortion
      */
-    public function __construct(FoodPortionType $type, int $amount)
+    public static function createFrom(FoodPortionType $type, int $amount): self
     {
-        $this->type = $type;
-        $this->amount = $amount;
+        // Close Guard
+        if ($amount <= 0) {
+            throw AmountNotValidException::fromAmount($amount);
+        }
+
+        $self = new self();
+        $self->type = $type;
+        $self->amount = $amount;
+
+        return $self;
     }
 
 

@@ -2,6 +2,7 @@
 
 namespace Dmontielfdez\Core\Food\Domain\Entities;
 
+use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;
 use Dmontielfdez\Core\Food\Domain\Enums\FoodStatus;
 use Dmontielfdez\Core\Food\Domain\Events\FoodCreated;
 use Dmontielfdez\Core\Food\Domain\Events\FoodPublished;
@@ -13,40 +14,27 @@ use function count;
 
 final class Food extends BaseEntity
 {
-    public FoodId $id;
-    public FoodStatus $status;
-    public string $name;
-    public ?int $proteins;
-    public ?int $fats;
-    public ?int $carbs;
-    public ?FoodPortion $foodPortion;
-
     public function __construct(
-        FoodId $id,
-        FoodStatus $status,
-        string $name,
-        ?int $proteins,
-        ?int $fats,
-        ?int $carbs,
-        ?FoodPortion $foodPortion
+        public FoodId $id,
+        public FoodStatus $status,
+        public string $name,
+        public ?int $proteins,
+        public ?int $fats,
+        public ?int $carbs,
+        public ?FoodPortion $foodPortion
     )
     {
-        $this->id = $id;
-        $this->status = $status;
-        $this->name = $name;
-        $this->proteins = $proteins;
-        $this->fats = $fats;
-        $this->carbs = $carbs;
-        $this->foodPortion = $foodPortion;
     }
 
+    // Factory method
     public static function create(
         FoodId $id,
         string $name,
         ?int $proteins,
         ?int $fats,
         ?int $carbs,
-        ?FoodPortion $foodPortion
+        FoodPortionType $type,
+        int $amount
     ): self
     {
         $self = new self(
@@ -56,7 +44,7 @@ final class Food extends BaseEntity
             $proteins,
             $fats,
             $carbs,
-            $foodPortion
+            FoodPortion::createFrom($type, $amount)
         );
 
         $self->domainEvents[] = FoodCreated::create($id);

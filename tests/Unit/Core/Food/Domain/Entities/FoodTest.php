@@ -6,6 +6,7 @@ use Dmontielfdez\Core\Food\Domain\Entities\Food;
 use Dmontielfdez\Core\Food\Domain\Enums\FoodPortionType;
 use Dmontielfdez\Core\Food\Domain\Events\FoodCreated;
 use Dmontielfdez\Core\Food\Domain\Events\FoodPublished;
+use Dmontielfdez\Core\Food\Domain\Exceptions\AmountNotValidException;
 use Dmontielfdez\Core\Food\Domain\Exceptions\FoodDataNotValidException;
 use Dmontielfdez\Core\Food\Domain\ValueObjects\FoodId;
 use Tests\Unit\Core\Food\FoodMother;
@@ -63,5 +64,21 @@ final class FoodTest extends TestCase
 
         // WHEN
         $food->publish();
+    }
+
+    public function testShouldThrownExceptionWhenAmountIsNotValid(): void
+    {
+        // GIVEN
+        $foodId = FoodId::random();
+        $name = FakerMother::name();
+        $proteins = FakerMother::quantity();
+        $fats = FakerMother::quantity();
+        $carbs = FakerMother::quantity();
+        $portionType = FakerMother::randomItem(FoodPortionType::class);
+        $amount = -3;
+        $this->expectException(AmountNotValidException::class);
+
+        // WHEN
+        FoodMother::create($foodId, $name, $proteins, $fats, $carbs, $portionType, $amount);
     }
 }
