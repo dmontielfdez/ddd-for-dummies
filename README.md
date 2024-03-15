@@ -11,4 +11,4 @@
 1. composer install
 2. npm install 
 3. make start
-4. make migrate
+4. make initDb

@@ -6,6 +6,7 @@ final class ListFoodRM
 {
     public function __construct(
         public string $id,
+        public string $status,
         public string $name,
         public ?int $proteins,
         public ?int $fats,

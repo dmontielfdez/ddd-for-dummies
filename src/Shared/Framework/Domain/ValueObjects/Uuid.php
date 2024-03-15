@@ -34,11 +34,6 @@ abstract class Uuid implements IdentifierInterface, JsonSerializable
         return $this->value;
     }
 
-    public function value(): string
-    {
-        return $this->value;
-    }
-
     public function equals(self $other): bool
     {
         return $this->getValue() === $other->getValue();

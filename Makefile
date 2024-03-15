@@ -13,11 +13,12 @@ stop: ## Stop all docker-compose
 bash: ## Stop all docker-compose
 	@./vendor/bin/sail bash
 
-migrate: ## Run migrations
-	@./vendor/bin/sail exec laravel php artisan migrate
+initDb: ## Run migrations
+	@./vendor/bin/sail exec laravel.test php artisan migrate
+	@./vendor/bin/sail exec laravel.test php artisan db:seed
 
 phpstan:
-	@./vendor/bin/sail exec laravel vendor/bin/phpstan analyse --memory-limit=2G --level 9 ./src ./Apps -c phpstan.neon
+	@./vendor/bin/sail exec laravel.test vendor/bin/phpstan analyse --memory-limit=2G --level 9 ./src ./Apps -c phpstan.neon
 
 composer:
 	@./vendor/bin/sail composer install
