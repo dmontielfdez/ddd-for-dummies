@@ -12,4 +12,9 @@ final class FoodRepository implements FoodRepositoryInterface
     {
 
     }
+
+    public function findByIdOrFail(): Food
+    {
+
+    }
 }

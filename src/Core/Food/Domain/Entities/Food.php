@@ -12,7 +12,7 @@ use Dmontielfdez\Core\Food\Domain\ValueObjects\FoodPortion;
 use Dmontielfdez\Shared\Framework\Domain\Entities\BaseEntity;
 use function count;
 
-final class Food extends BaseEntity
+class Food extends BaseEntity
 {
     public function __construct(
         public FoodId $id,
