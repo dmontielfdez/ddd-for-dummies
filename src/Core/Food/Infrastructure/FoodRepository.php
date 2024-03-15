@@ -4,6 +4,7 @@ namespace Dmontielfdez\Core\Food\Infrastructure;
 
 use Dmontielfdez\Core\Food\Domain\Entities\Food;
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
+use Dmontielfdez\Core\Food\Domain\ValueObjects\FoodId;
 
 final class FoodRepository implements FoodRepositoryInterface
 {
@@ -13,8 +14,13 @@ final class FoodRepository implements FoodRepositoryInterface
 
     }
 
-    public function findByIdOrFail(): Food
+    public function findByIdOrFail(FoodId $foodId): Food
     {
 
+    }
+
+    public function findAll(): array
+    {
+        return [];
     }
 }
