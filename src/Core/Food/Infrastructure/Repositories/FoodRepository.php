@@ -25,7 +25,6 @@ final class FoodRepository implements FoodRepositoryInterface
         FoodPortionAR::query()->updateOrCreate(
             ['foodId' => $food->id->getValue()],
             ['type' => $food->foodPortion->type->value, 'amount' => $food->foodPortion->amount]
-
         );
     }
 
