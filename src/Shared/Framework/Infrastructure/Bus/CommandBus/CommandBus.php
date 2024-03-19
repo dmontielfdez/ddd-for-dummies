@@ -2,9 +2,11 @@
 
 namespace Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus;
 
+use Dmontielfdez\Shared\Framework\Application\Commands\CommandInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\CommandBus\CommandBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\CommandBus\CommandHandlerInterface;
 use Illuminate\Support\Facades\App;
 use RuntimeException;
-use Dmontielfdez\Shared\Framework\Application\Commands\CommandInterface;
 use function get_class;
 
 final class CommandBus implements CommandBusInterface

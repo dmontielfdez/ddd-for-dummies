@@ -4,8 +4,8 @@ namespace Dmontielfdez\Core\Food\Application\Commands\CreateFood;
 
 use Dmontielfdez\Core\Food\Domain\Entities\Food;
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandHandlerInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\CommandBus\CommandHandlerInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\EventBus\EventBusInterface;
 
 final readonly class CreateFoodHandler implements CommandHandlerInterface
 {

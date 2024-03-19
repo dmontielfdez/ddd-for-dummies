@@ -3,7 +3,7 @@
 namespace Tests\Unit\Core\Food\Application\Commands\CreateFood;
 
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\EventBus\EventBusInterface;
 use Tests\Unit\TestCase;
 
 final class CreateFoodHandlerTest extends TestCase

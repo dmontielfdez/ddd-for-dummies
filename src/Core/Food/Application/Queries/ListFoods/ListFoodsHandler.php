@@ -4,7 +4,7 @@ namespace Dmontielfdez\Core\Food\Application\Queries\ListFoods;
 
 use Dmontielfdez\Core\Food\Domain\ReadModels\ListFoodRM;
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\QueryBus\QueryHandlerInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\QueryBus\QueryHandlerInterface;
 
 final class ListFoodsHandler implements QueryHandlerInterface
 {

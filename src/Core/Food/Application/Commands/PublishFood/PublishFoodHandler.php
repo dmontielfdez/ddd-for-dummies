@@ -3,8 +3,8 @@
 namespace Dmontielfdez\Core\Food\Application\Commands\PublishFood;
 
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandHandlerInterface;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\CommandBus\CommandHandlerInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\EventBus\EventBusInterface;
 
 final readonly class PublishFoodHandler implements CommandHandlerInterface
 {
