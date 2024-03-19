@@ -4,12 +4,12 @@ namespace App\Providers;
 
 use Dmontielfdez\Core\Food\Domain\Repositories\FoodRepositoryInterface;
 use Dmontielfdez\Core\Food\Infrastructure\Repositories\FoodRepository;
+use Dmontielfdez\Shared\Framework\Domain\Bus\CommandBus\CommandBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\EventBus\EventBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\QueryBus\QueryBusInterface;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandBus;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\CommandBus\CommandBusInterface;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBus;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus\EventBusInterface;
 use Dmontielfdez\Shared\Framework\Infrastructure\Bus\QueryBus\QueryBus;
-use Dmontielfdez\Shared\Framework\Infrastructure\Bus\QueryBus\QueryBusInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 

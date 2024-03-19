@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Shared\Framework\Infrastructure\Bus\QueryBus;
+namespace Dmontielfdez\Shared\Framework\Domain\Bus\QueryBus;
 
 
 use Dmontielfdez\Shared\Framework\Application\Queries\QueryInterface;

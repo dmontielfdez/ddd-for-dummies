@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmontielfdez\Shared\Framework\Infrastructure\Bus\EventBus;
+namespace Dmontielfdez\Shared\Framework\Domain\Bus\EventBus;
 
 use Dmontielfdez\Shared\Framework\Domain\Events\BaseEvent;
 use Throwable;

@@ -3,6 +3,8 @@
 namespace Dmontielfdez\Shared\Framework\Infrastructure\Bus\QueryBus;
 
 use Dmontielfdez\Shared\Framework\Application\Queries\QueryInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\QueryBus\QueryBusInterface;
+use Dmontielfdez\Shared\Framework\Domain\Bus\QueryBus\QueryHandlerInterface;
 use Illuminate\Support\Facades\App;
 use RuntimeException;
 use function get_class;
